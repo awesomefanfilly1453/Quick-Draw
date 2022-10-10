@@ -1,0 +1,38 @@
+body{
+    background-color: darkseagreen;
+}
+h1{
+    background-color: antiquewhite;
+    color: darksalmon;
+}
+#show_sketch{
+    float: right;
+}
+p{
+    font-size: 25px;
+    padding-top: 10p;
+}
+#timer{
+float: right;
+    margin: 25px;
+}
+#score{
+    float:left;
+    margin: 25px;
+    
+}
+canvas{
+    border: 5px solid beige;
+    border-radius: 20px;
+    animation-name:example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-top: 100px
+        
+}
+@keyframes example{
+    from{
+        box-shadow: 1px 1px 38px yellow;
+    }
+    to{box-shadow: 1px 1px 38px aliceblue;}
+}
