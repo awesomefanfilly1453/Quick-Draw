@@ -2,9 +2,9 @@ array_1=["coffee cup","mittens","stick figure","bottle","alarm clock","lemon","p
 var random_no = Math.floor((Math.random()*array_1.length)+1);
 
 console.log(array_1[random_no]);
-var Element_of_array = array_1[random_no];
-console.log(Element_of_array);
-document.getElementById("sketch_to_be_drawn").innerHTML="Sketch to be drawn:"+Element_of_array;
+var sketch = array_1[random_no];
+console.log(sketch);
+document.getElementById("sketch_to_be_drawn").innerHTML="Sketch to be drawn:"+sketch;
 var time_counter=0;
 var time_check="";
 drawn_sketch="";
@@ -53,9 +53,9 @@ function updateCanvas(){
     var random_no = Math.floor((Math.random()*array_1.length)+1);
 
 console.log(array_1[random_no]);
-var Element_of_array = array_1[random_no];
-console.log(Element_of_array);
-document.getElementById("sketch_to_be_drawn").innerHTML="Sketch to be drawn:"+Element_of_array;
+var sketch = array_1[random_no];
+console.log(sketch);
+document.getElementById("sketch_to_be_drawn").innerHTML="Sketch to be drawn:"+sketch;
 }
 
 function classifyCanvas(){
@@ -66,7 +66,7 @@ function gotresult(error,result){
         console.error(error);
     }
     console.log(result);
-    document.getElementById("label").innerHTML=="Your Sketch:"+result[0].label;
+    document.getElementById("label").innerHTML="Your Sketch:"+result[0].label;
     document.getElementById("confidence").innerHTML="Confidence : "+Math.round(result[0].confidence*100)+"%";
     utterthis=new SpeechSynthesisUtterance(result[0].label);
     synth.speak(utterthis);
